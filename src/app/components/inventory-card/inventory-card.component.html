@@ -1,0 +1,20 @@
+<div class="product-card">
+    <div class="product-card__text-container">
+        <div *ngIf="product?.daysLeft && (product?.daysLeft || 10) < 10" class="product-card__warning">
+            You have Stock for {{ product?.daysLeft | number:'1.0-0' }} days left
+        </div>
+        <h2 class="product-card__title">
+            {{ product?.product?.Product }} - size:
+            {{ product?.product?.size || "N/A" }}
+        </h2>
+        <h3 class="product-card__description">In stock: {{ product?.qty }}</h3>
+        <h3 class="product-card__description">
+            Last order date: {{ product?.lastOrderDate?.toDate() || "" | date }}
+        </h3>
+        <a href="{{ product?.product?.order_url || '' }}" target="_blank">
+            <button class="product-card__button kc-button kc-button-primary">
+                Order more
+            </button>
+        </a>
+    </div>
+</div>

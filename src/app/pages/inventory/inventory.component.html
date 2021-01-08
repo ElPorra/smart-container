@@ -1,0 +1,8 @@
+<div *ngIf="!isLoading" class="inventory-page__list">
+  <div class="sortby">
+    SortBy: <span (click)="sort('daysLeft')" class="sort-item">OrderDate</span><span (click)="sort('qty')" class="sort-item">Stock</span>
+  </div>
+    <app-inventory-card *ngFor="let element of inventory" [product]="element">
+    </app-inventory-card>
+</div>
+<img *ngIf="isLoading" style="width: 100%;" src="/assets/img/loading.gif" />

@@ -1,0 +1,5 @@
+<div *ngIf="!isLoading" class="inventory-page__list">
+    <app-product-card *ngFor="let element of products" [product]="element">
+    </app-product-card>
+</div>
+<img *ngIf="isLoading" style="width: 100%;" src="/assets/img/loading.gif" />

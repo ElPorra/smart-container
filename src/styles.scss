@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+@import "./styles/components/index.scss";
+@import "./styles/pages/index.scss";
+
+.page_layout {
+    margin-top: 4rem;
+}
+
+.hide-for-small {
+    @media (max-width: 800px) {
+        display: none;
+    }
+}
+
+.hide-for-large {
+    @media (min-width: 800px) {
+        display: none;
+    }
+}
+
+.sortby {
+    padding-left: 1rem;
+    font-weight: bolder;
+
+    .sort-item {
+        padding-left: 1rem;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}

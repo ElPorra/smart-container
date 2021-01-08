@@ -1,0 +1,79 @@
+.navbar {
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__horizontal {
+        width: 100%;
+        display: flex;
+        flex: 1 1 auto;
+        height: 4rem;
+        box-shadow: rgba($color: #000000, $alpha: 0.1) 0px 2px 24px 0px;
+        align-items: center;
+    }
+
+    &__button {
+        display: flex;
+        text-decoration: none;
+        padding: 0 1rem 0 1rem;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2;
+        letter-spacing: 1.75px;
+        text-align: center;
+        color: black;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__left {
+        padding-left: 1rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__right {
+        padding-right: 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__center {
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+
+    &__logo {
+        padding-right: 0.5rem;
+        max-height: 2rem;
+        max-width: 2rem;
+    }
+
+    &__mobile {
+
+        &-menu {
+            width: 100%;
+            background-color: white;
+        }
+
+        &--item {
+            width: 100%;
+            border-bottom: solid 1px lightgray;
+            padding: 1rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: lightgray;
+            }
+        }
+    }
+}

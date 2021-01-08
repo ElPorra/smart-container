@@ -1,0 +1,71 @@
+<div class="navbar">
+    <div class="navbar__horizontal hide-for-small">
+        <div class="navbar__left">
+            <a [routerLink]="['/']" class="navbar__button"> My inventory </a>
+            <a [routerLink]="['/children']" class="navbar__button">
+                My children
+            </a>
+        </div>
+        <div class="navbar__center">
+            <a [routerLink]="['/']" class="navbar__button">
+                <img class="navbar__logo" src="assets/img/logo.png" />
+                <span>Kimberly Clark</span>
+            </a>
+        </div>
+        <div class="navbar__right">
+            <a [routerLink]="['/products']" class="navbar__button">
+                Order products
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar__mobile hide-for-large">
+        <div class="navbar__horizontal">
+            <div class="navbar__left">
+                <fa-icon
+                    class="navbar__button"
+                    (click)="showBarMenu = !showBarMenu"
+                    [icon]="showBarMenu ? faTimes : faBars"
+                    [size]="'lg'"
+                >
+                </fa-icon>
+            </div>
+            <div class="navbar__center">
+                <a [routerLink]="['/']" class="navbar__button">
+                    <img class="navbar__logo" src="assets/img/logo.png" />
+                    <span>Kimberly Clark</span>
+                </a>
+            </div>
+        </div>
+
+        <div *ngIf="showBarMenu" class="navbar__mobile-menu">
+            <div class="navbar__mobile--item">
+                <a
+                    [routerLink]="['/']"
+                    (click)="showBarMenu = !showBarMenu"
+                    class="navbar__button"
+                >
+                    My inventory
+                </a>
+            </div>
+            <div class="navbar__mobile--item">
+                <a
+                    [routerLink]="['/children']"
+                    (click)="showBarMenu = !showBarMenu"
+                    class="navbar__button"
+                >
+                    My children
+                </a>
+            </div>
+            <div class="navbar__mobile--item">
+                <a
+                    [routerLink]="['/products']"
+                    (click)="showBarMenu = !showBarMenu"
+                    class="navbar__button"
+                >
+                    Order products
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

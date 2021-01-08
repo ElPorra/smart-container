@@ -1,0 +1,28 @@
+<div class="product-card">
+    <div class="product-card__text-container">
+        <div
+            *ngIf="child?.daysLeft && (child?.daysLeft || 5) < 5"
+            class="product-card__warning"
+        >
+            You might need to change product size
+        </div>
+        <h2 class="product-card__title">
+            {{ child?.name }}
+        </h2>
+        <div class="product-card__text-container">
+            <h4>Products</h4>
+            <h3
+                *ngFor="let item of child?.products"
+                class="product-card__product"
+            >
+                {{ item?.Product }} - size: {{ item?.size }}
+            </h3>
+        </div>
+        <h3 class="product-card__description">
+            Birth day: {{ child?.birthdate || "" | date }}
+        </h3>
+        <h3 class="product-card__description">
+            Next size date: {{ child?.next_size_date || "" | date }}
+        </h3>
+    </div>
+</div>

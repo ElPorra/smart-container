@@ -1,0 +1,14 @@
+<div class="product-card">
+    <div class="product-card__text-container">
+        <h2 class="product-card__title">
+            {{ product?.Product }} - size:
+            {{ product?.size || "N/A" }}
+        </h2>
+        <h3 class="product-card__description">{{ product?.desc }}</h3>
+        <a href="{{ product?.order_url || '' }}" target="_blank">
+            <button class="product-card__button kc-button kc-button-primary">
+                Order now
+            </button>
+        </a>
+    </div>
+</div>

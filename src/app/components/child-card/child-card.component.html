@@ -15,7 +15,7 @@
                 *ngFor="let item of child?.products"
                 class="product-card__product"
             >
-                {{ item?.Product }} - size: {{ item?.size }}
+                {{ item?.Product }} - size: {{ item?.size || "N/A" }}
             </h3>
         </div>
         <h3 class="product-card__description">
